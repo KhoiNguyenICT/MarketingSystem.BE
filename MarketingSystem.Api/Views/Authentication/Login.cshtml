@@ -1,0 +1,23 @@
+﻿@model CMarketingSystemApi.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<p class="box-lead">Welcome back, sign in with your existing account credentials</p>
+
+<form method="post" asp-controller="Authentication" asp-action="Login">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter your email address" asp-for="Username">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" asp-for="Password"/>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block text-uppercase">Log me in</button>
+    </div>
+</form>
+
+<div class="account-references">
+    Forgot your username or password?
+    <a href="">Forgot password?</a>
+</div>
